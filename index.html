@@ -1,0 +1,63 @@
+<!DOCTYPE HTML >
+<html ng-app="myApp">
+<head>
+	<title>The network</title>
+	
+	<link rel="stylesheet" type="text/css" href="normalize.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+	
+	<div id="header">
+		<div id="logo">
+			<img src="images/logo.png" alt="the network"/>
+		</div>	
+		<div id="search">
+			<form method="get" action="#">
+				<input type="search" name="terms" placeholder="Search...."/>
+				<input type="submit" value="Go"/>
+			</form>
+		</div>
+	</div>
+	
+	<div id="page">
+
+		<div ng-controller="testCtrl">
+			<h1><img ng-repeat="user in users" src="{{user.pic}}">{{users[0].username}}</h1>
+			<p>{{posts[0].content}}</p>
+			<h3>{{posts[0].comments}}</h3>
+		</div>
+
+
+<!-- 		<div id="login" ng-controller="usersCtrl">
+			
+		</div>
+		<div id="users" ng-controller="usersCtrl">
+		  <span  ng-repeat="user in users">
+		  	<img src="{{user.pic}}">
+			<h3>{{user.username}}</h3>
+			<p>{{user.about}}</p>
+		   </span>
+		</div>
+		<div id="posts" ng-controller="postCtrl">
+			<div ng-repeat="post in posts">
+				<h3>{{post.userId}}</h3>
+				<p>{{post.content}}</p>
+				
+					<h3>{{post.comments.userId}}</h3>
+					<p>{{post.comments.content}}</p>
+				
+			</div>
+		</div> -->
+	</div>
+	
+	<div>
+		<p>This is a footer mesage</p>
+	</div>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+</html>
